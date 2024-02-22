@@ -12,6 +12,7 @@
 		7C486B942B85FD09007458CC /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C486B932B85FD09007458CC /* WeatherAppTests.swift */; };
 		7C486B9E2B85FD09007458CC /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C486B9D2B85FD09007458CC /* WeatherAppUITests.swift */; };
 		7C486BA02B85FD09007458CC /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C486B9F2B85FD09007458CC /* WeatherAppUITestsLaunchTests.swift */; };
+		7CC980602B87C0BE00EC6C78 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9805F2B87C0BE00EC6C78 /* LocationManager.swift */; };
 		7CDB39D42B8600E100A67EFA /* CurrentLocationWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB39D32B8600E100A67EFA /* CurrentLocationWeatherView.swift */; };
 		7CDB4B9A2B861D8600A67EFA /* Rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CDB4B992B861D8600A67EFA /* Rain.json */; };
 		7CDB4B9C2B861E0100A67EFA /* Sunny.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CDB4B9B2B861E0100A67EFA /* Sunny.json */; };
@@ -48,6 +49,7 @@
 		7C486B992B85FD09007458CC /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C486B9D2B85FD09007458CC /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		7C486B9F2B85FD09007458CC /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7CC9805F2B87C0BE00EC6C78 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7CDB39D32B8600E100A67EFA /* CurrentLocationWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationWeatherView.swift; sourceTree = "<group>"; };
 		7CDB4B992B861D8600A67EFA /* Rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rain.json; sourceTree = "<group>"; };
 		7CDB4B9B2B861E0100A67EFA /* Sunny.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sunny.json; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		7CDB39D52B86010000A67EFA /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				7CC9805F2B87C0BE00EC6C78 /* LocationManager.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC980602B87C0BE00EC6C78 /* LocationManager.swift in Sources */,
 				7CDB39D42B8600E100A67EFA /* CurrentLocationWeatherView.swift in Sources */,
 				7C486B832B85FD06007458CC /* WeatherApp.swift in Sources */,
 				7CDB4BA72B86367200A67EFA /* BackgroundAnimationView.swift in Sources */,
@@ -509,6 +513,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Would like to access location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -543,6 +548,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Would like to access location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
