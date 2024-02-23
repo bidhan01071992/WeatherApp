@@ -9,10 +9,8 @@ import CoreLocation
 
 class LocationManager: NSObject, ObservableObject {
     var locationManager = CLLocationManager()
-    @Published var authorizationStatus: CLAuthorizationStatus?
-    @Published var location: CLLocation?
-    @Published var error: Error?
-    
+    var locationCallBack: ((CLLocation?, Error?, CLAuthorizationStatus?) -> ())?
+
     override init() {
         super.init()
         locationManager.delegate = self
@@ -21,16 +19,14 @@ class LocationManager: NSObject, ObservableObject {
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        locationCallBack?(nil, nil, manager.authorizationStatus)
         switch manager.authorizationStatus {
         case .authorizedWhenInUse:
-            authorizationStatus = .authorizedWhenInUse
             manager.requestLocation()
             break
         case .restricted, .denied:
-            authorizationStatus = .restricted
             break
         case .notDetermined:
-            authorizationStatus = .notDetermined
             manager.requestWhenInUseAuthorization()
             break
         default:
@@ -40,10 +36,10 @@ extension LocationManager: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
-        self.location = location
+        locationCallBack?(location, nil, nil)
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        self.error = error
+        locationCallBack?(nil, error, nil)
     }
 }

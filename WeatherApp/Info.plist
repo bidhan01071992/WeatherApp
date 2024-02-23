@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GeopositionSubURL</key>
+	<string>locations/v1/cities/geoposition/search</string>
+	<key>APIKey</key>
+	<string>{API_KEY}</string>
+	<key>ServerBaseURL</key>
+	<string>http://dataservice.accuweather.com</string>
+</dict>
+</plist>
