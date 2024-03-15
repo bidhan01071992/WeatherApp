@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CurrentLocationWeatherView: View {
-    @StateObject var locationManager = LocationManager()
+
+    @StateObject var currentLocationViewModel: CurrentLocationWeatherViewModel
+
     var body: some View {
         VStack {
             BackgroundAnimationView(model: .init(weatherBackground: .Cloudy))
-            Text("Latitude: \(locationManager.location?.coordinate.latitude.description ?? "Error loading")")
-            Text("Longitude: \(locationManager.location?.coordinate.longitude.description ?? "Error loading")")
         }
         
     }

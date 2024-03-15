@@ -15,19 +15,19 @@ protocol WeatherAPI {
 enum Constants: String {
     case APIKey
     case ServerBaseURL
-    case geopositionSubURL
+    case GeopositionSubURL
 }
 
 class CurrenLocationWeatherAPI: WeatherAPI {
 
     func fetchData<T>(queryParams: [String]) -> AnyPublisher<T, Error>? where T : Decodable, T : Encodable {
         guard let baseURL = Bundle.main.infoDictionary?[Constants.ServerBaseURL.rawValue],
-              let geopositionSubURL = Bundle.main.infoDictionary?[Constants.geopositionSubURL.rawValue],
+              let geopositionSubURL = Bundle.main.infoDictionary?[Constants.GeopositionSubURL.rawValue],
               let apiKEY = Bundle.main.infoDictionary?[Constants.APIKey.rawValue] else {
             return nil
         }
-        let params = queryParams.joined(separator: ",")
-        let geopositionURLSTR = "\(baseURL)\(geopositionSubURL)?apikey=\(apiKEY)?q=\(params)"
+        let params = queryParams.joined(separator: ",").utf8
+        let geopositionURLSTR = "\(baseURL)\(geopositionSubURL)?apikey=\(apiKEY)&q=\(params)"
         guard let apiURL = URL(string: geopositionURLSTR) else { return nil }
         return URLSession.shared.dataTaskPublisher(for: apiURL)
             .map(\.data)

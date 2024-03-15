@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C3973D12BA45B4B00667762 /* CurrentLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3973D02BA45B4B00667762 /* CurrentLocationModel.swift */; };
 		7C486B832B85FD06007458CC /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C486B822B85FD06007458CC /* WeatherApp.swift */; };
 		7C486B872B85FD08007458CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C486B862B85FD08007458CC /* Assets.xcassets */; };
 		7C486B942B85FD09007458CC /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C486B932B85FD09007458CC /* WeatherAppTests.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C3973D02BA45B4B00667762 /* CurrentLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModel.swift; sourceTree = "<group>"; };
 		7C486B7F2B85FD06007458CC /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C486B822B85FD06007458CC /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
 		7C486B862B85FD08007458CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		7CDB39D72B86015400A67EFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7C3973D02BA45B4B00667762 /* CurrentLocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				7C486B832B85FD06007458CC /* WeatherApp.swift in Sources */,
 				7CC980642B886EF100EC6C78 /* WeatherAPI.swift in Sources */,
 				7CC980622B87CD3A00EC6C78 /* CurrentLocationWeatherViewModel.swift in Sources */,
+				7C3973D12BA45B4B00667762 /* CurrentLocationModel.swift in Sources */,
 				7CDB4BA72B86367200A67EFA /* BackgroundAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +401,7 @@
 /* Begin XCBuildConfiguration section */
 		7C486BA12B85FD09007458CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC9806B2B8892A500EC6C78 /* WeatherConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
